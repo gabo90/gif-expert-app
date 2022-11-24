@@ -1,5 +1,9 @@
+interface GridItemProps {
+    title: string
+    url: string
+}
 
-export const GridItem = ({title, url}:any) => {
+export const GridItem = ({title, url}: GridItemProps) => {
 
     return (
         <div className="card">

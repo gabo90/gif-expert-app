@@ -1,7 +1,11 @@
 import useFetchGifs from '../hooks/useFetchGifs';
 import { GridItem } from '.';
 
-export const GifGrid = ({category}:any) => {
+interface GifGridProps {
+    category: String
+}
+
+export const GifGrid = ({category}:GifGridProps) => {
     
     const {images, isLoading} = useFetchGifs(category)
     

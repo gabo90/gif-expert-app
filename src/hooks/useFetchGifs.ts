@@ -6,7 +6,7 @@ import { fetchGifs } from "../helpers/fetchGifs";
 
 const useFetchGifs = (category:any) => {
 
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState(Array());
     const [isLoading, setIsLoading] = useState(true);
     
     const fetchImages = async() => {
@@ -26,4 +26,4 @@ const useFetchGifs = (category:any) => {
     }
 }
 
-export default useFetchGifs
+export default useFetchGifs;

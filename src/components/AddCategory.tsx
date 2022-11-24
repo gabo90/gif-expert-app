@@ -1,7 +1,10 @@
 import { useState } from "react"
 
+interface AddCategoryProps {
+    onNewCategory: Function
+}
 
-export const AddCategory = ({onNewCategory}:any) => {
+export const AddCategory = ({onNewCategory}:AddCategoryProps) => {
     const [inputValue, setInputValue] = useState('')
     
     const onInputChange = ({target}:any) => {
@@ -17,7 +20,7 @@ export const AddCategory = ({onNewCategory}:any) => {
     }
 
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSubmit} aria-label="form">
             <input
                 type="text"
                 placeholder="Buscar Gifs"
